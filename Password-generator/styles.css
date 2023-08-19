@@ -127,7 +127,6 @@ h1{
     position: absolute;
     content: "";
     height: 100%;
-    background-color: #ffe11a;
     width: 50%;
 }
 .pass-length{
@@ -150,15 +149,15 @@ h1{
     cursor: pointer;
     /* appearance: none; */
 }
-.pass-indicator#low{
+.pass-indicator#low::before{
     background-color: red;
     width: 30%;
 }
-.pass-indicator#medium{
+.pass-indicator#medium::before{
     background-color: #ffe11a;
     width: 60%;
 }
-.pass-indicator#high{
+.pass-indicator#high::before{
     background-color: #00ff00;
     width: 100%;
 }
