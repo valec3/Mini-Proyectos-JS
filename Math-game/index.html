@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css file  -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-content">
+        <header class="container">
+            <h1>Math Game</h1>
+        </header>
+        <main class="container game flex-col">
+            <section class="question-container flex-col">
+                <h2>Completa el espacio en blanco con el operador o numero correcto</h2>
+                <div class="question" id="question"></div>
+                <button class="btn" id="btn-submit">Enviar</button>
+                <div class="error-msg hide" id="error-msg"><p>Algo salio mal</p></div>
+            </section>
+            <div class="controls-container">
+                <p class="result" id="result"></p>
+                <button class="btn" id="start-btn">Iniciar juego</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
