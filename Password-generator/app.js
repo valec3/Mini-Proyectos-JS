@@ -3,6 +3,7 @@ const lengthPassword = document.getElementById('input-pass-length');
 const options = document.querySelectorAll('.option input');
 const btnGeneratePassword = document.getElementById('btn-generate-password');
 const passIndicator = document.getElementById('pass-indicator');
+const btnCopy= document.querySelector('.btn-copy');
 
 
 const characterAlternatives = {
@@ -57,5 +58,12 @@ const generatePassword = () => {
     contentPassword.value = randomPass;
     
 }
+const copyPassword = async() => {
+    try {
+        await navigator.clipboard.writeText(contentPassword.value);
+    } catch (error) {
+    }
+}
 lengthPassword.addEventListener('input', updateSliderText);
 btnGeneratePassword.addEventListener('click', generatePassword)
+btnCopy.addEventListener('click', copyPassword)
