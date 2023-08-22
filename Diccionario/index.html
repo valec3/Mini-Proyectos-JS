@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-app">
+        <main class="container">
+            <div class="app">
+                <h1>Diccionario</h1>
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" name="" id="input-word" required placeholder="Busca una palabra">
+                    <span class="material-icons" id="btn-close">close</span>
+                </div>
+                <div class="info">
+                    <p>Escribe una palabra y presiona enter para obtener su significado</p>
+                </div>
+                <div class="result">
+                    <ul>
+                        <li class="word">
+                            <div class="details">
+                                <p>happy</p>
+                                <span>adjective/"happy</span>
+                            </div>
+                            <i class="fa fa-volume-up btn-voice"></i>
+                        </li>
+                        <li class="meaning">
+                            <div>
+                                <p>Meaning</p>
+                                <span>feeling or showing or contentment</span>
+                            </div>
+                        </li>
+                        <li class="example">
+                            <div>
+                                <p>Example</p>
+                                <span>Lorem ipsum dolor sit, amet consectetur dasdsa sadas.</span>
+                            </div>
+                        </li>
+                        <li class="synonyms">
+                            <div>
+                                <p>synonyms</p>
+                                <div class="list-synonyms">
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

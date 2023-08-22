@@ -43,10 +43,15 @@ address{
 }
 html{
     scroll-behavior: smooth;
+    font-size: 10px;
 }
 body{
     font-family: var(--ff-principal);
     color: black;
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    height: 1800vh;
 }
 
 :focus-visible{
@@ -66,12 +71,38 @@ body{
     background-color: hsl(0, 0%, 70%);
 }
 /*-----------------------------------*\
-    #APP
+    #REUSED STYLE
 \*-----------------------------------*/
 .bg-app{
-    background: #fe4b4b;
+    min-height: 100vh;
+    background: linear-gradient(#da2e2c 49%, #090029 49%, #090029 51%,#fff 51%);
 }
 
+.btn{
+    background-color: #fff;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border: 5px solid #090029 ;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.score-container{
+    position: absolute;
+    min-height: 100vh;
+    display: grid;
+    width: 100%;
+    place-content: center;
+}
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/

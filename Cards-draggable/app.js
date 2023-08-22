@@ -30,7 +30,6 @@ const initSortableList = (e) => {
         const siblingCenter = siblingRect.y + siblingRect.height / 2;
         return e.clientY < siblingCenter;
     });
-    console.log(nextSibling);
     // Insertar el elemento arrastrado antes del siguiente hermano en la lista
     sortedList.insertBefore(itemDragging, nextSibling);
 }
