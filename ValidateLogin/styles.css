@@ -70,11 +70,12 @@ body{
 \*-----------------------------------*/
 .bg-app{
     min-height: 100vh;
-    background: rgb(48, 175, 234);
+    background: rgb(35, 215, 255);
 }
 
 .container{
     height: 100vh;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -82,56 +83,85 @@ body{
 }
 
 .app{
+    display: block;
+    position: relative;
     background-color: #fff;
     border-radius: 1rem;
     padding: 2rem 3rem;
-    min-width:540px ;
-    transition: display .5s ease-in-out;
+    min-width: 540px;
+    max-width:540px ;
+}
+.app h1{
+    font-size: 1.8rem;
+}
+.app form{
+    margin-top: 1rem;
+}
+.app form .field{
+    margin-bottom: 1rem;
+}
+.app form .input-field{
+    position: relative;
+    height: 55px;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid #bfbcbc;
+    padding: 0 1rem;
+}
+.app form .input-field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: #333;
 }
 
-.image-container{
-    position: relative;
-    max-height: 300px;
-    max-width: 500px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    border-radius: inherit;
+.field .error{
+    font-size: .8rem;
+    align-items: flex-start;
+    margin-top: 6px;
+    gap: .5rem;
+    color: rgb(211, 69, 69);
+    display: none;
 }
-.carousel{
-    transition: transform .5s ease-in-out;
+.error .fa-exclamation-circle{
+    margin-top: 5px;
+}
+.input-field.pass-create,
+.input-field.confirm-pass{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.carousel img{
-    border-radius: 1rem;
-    border: solid 3px #ccc;
+.input-field i{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.field.btn input{
+    height: 55px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.app .btn{
-    position: absolute;
-    height: 36px;
-    width: 36px;
-    background-color: #343434;
-    border-radius: 50%;
-    text-align: center;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
     font-size: 1rem;
-    line-height: 36px;
+    font-weight: 500;
+    background-color: rgb(57, 192, 222);
     color: #fff;
     cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform .2s ease-in-out;
-    z-index: 99;
+    transition: all 0.3s ease;
 }
-.app .btn:active{
-    transform: scale(0.94) translateY(-50%);
+.field.btn input:hover{
+    background-color: rgb(35, 215, 255, 0.8);
 }
-.app .btn-left{
-    left: 1rem;
+
+.input-field.invalid ~.error{
+    display: flex;
 }
-.app .btn-right{
-    right: 1rem;
+.app .input-field.invalid{
+    border-color: red;
 }
 /*-----------------------------------*\
     #MEDIA QUERIES
