@@ -1,0 +1,138 @@
+/*-----------------------------------*\
+    #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root{
+    --ff-principal: 'Poppins', sans-serif;
+    --bg-color-1: hsl(0, 0%, 100%);
+}
+
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a,img,span,button{
+    display: block;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    height: auto;
+}
+button{
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+address{
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--ff-principal);
+    color: black;
+}
+
+:focus-visible{
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: hsl(0, 0%, 98%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 80%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(0, 0%, 70%);
+}
+/*-----------------------------------*\
+    #REUSED STYLE
+\*-----------------------------------*/
+.bg-app{
+    min-height: 100vh;
+    background: rgb(48, 126, 234);
+}
+
+.container{
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+.app{
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    min-width:540px ;
+    transition: display .5s ease-in-out;
+}
+
+.image-container{
+    position: relative;
+    max-height: 300px;
+    max-width: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: inherit;
+}
+.carousel{
+    transition: transform .5s ease-in-out;
+    display: flex;
+}
+.carousel img{
+    border-radius: 1rem;
+    border: solid 3px #ccc;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.app .btn{
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    background-color: #343434;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 36px;
+    color: #fff;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .2s ease-in-out;
+    z-index: 99;
+}
+.app .btn:active{
+    transform: scale(0.94) translateY(-50%);
+}
+.app .btn-left{
+    left: 1rem;
+}
+.app .btn-right{
+    right: 1rem;
+}
+/*-----------------------------------*\
+    #MEDIA QUERIES
+\*-----------------------------------*/
