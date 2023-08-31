@@ -70,10 +70,66 @@ body{
 \*-----------------------------------*/
 .bg-app{
     background: #fe4b4b;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
 }
 .app{
-    
+    width: 100%;
+    background-color: #fff;
+    max-width: 600px;
+    min-width: 500px;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.sorted-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.item{
+    width: 100%;
+    border-radius: 2rem;
+    background-color: #abacad;
+    padding: .5rem;
+    font-weight: bold;
+}
+.details{
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+}
+.sorted-list li:nth-of-type(odd){
+    color: #fff;
+    background-color: rgb(91, 91, 91);
+}
+.details img{
+    width: 64px;
+    border-radius: 50%;
 }
 /*-----------------------------------*\
     #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (max-width: 768px){
+    .app{
+        min-width: 400px;
+    }
+}
+@media (max-width: 468px){
+    .app{
+        min-width: 0px ;
+    }
+}
