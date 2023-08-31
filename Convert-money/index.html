@@ -23,12 +23,12 @@
                     <form action="">
                         <div class="amount">
                             <h2 for="">Ingrese un monto:</h2>
-                            <input type="text" value="1">
+                            <input type="text" value="1" id="amount">
                             <div class="drop-list">
                                 <div class="from">
                                     <p>De:</p>
                                     <div class="select-box">
-                                        <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                                        <img class="imgFlag" src="https://flagsapi.com/US/flat/64.png" alt="">
                                         <select name="">
                                             <option value="USD">USD</option>
                                             <option value="NPR">NPR</option>
@@ -39,12 +39,12 @@
                                     </div>
                                 </div>
                                 <div class="icon-from-to">
-                                    <i class="fa fa-exchange-alt"></i>
+                                    <i id="reverse-exchange" class="fa fa-exchange-alt"></i>
                                 </div>
                                 <div class="to">
                                     <p>A:</p>
                                     <div class="select-box">
-                                        <img src="https://flagsapi.com/PE/flat/64.png" alt="">
+                                        <img class="imgFlag" src="https://flagsapi.com/PE/flat/64.png" alt="">
                                         <select name="">
                                             <option value="USD">USD</option>
                                             <option value="NPR">NPR</option>
@@ -57,10 +57,10 @@
                             </div>                            
                         </div>
                         <div class="exchange-rate">
-                            1 USD = 3.75 PEN
+                            Cargando...
                         </div>
                         <div class="btn-container">
-                            <button class="btn">Obtener cambio</button>
+                            <button class="btn" id="btn-convert">Obtener cambio</button>
                         </div>
                     </form>
                 </div>
@@ -68,6 +68,7 @@
         </main>
     </div>
 
+    <script src="./country.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>

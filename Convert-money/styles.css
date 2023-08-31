@@ -70,7 +70,7 @@ body{
 \*-----------------------------------*/
 .bg-app{
     min-height: 100vh;
-    background: rgb(46, 223, 43);
+    background: rgb(244, 168, 27);
 }
 
 .container{
@@ -112,12 +112,35 @@ body{
     border: 2px solid #3c8ef8;
 }
 .app .form .drop-list{
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.app .form .drop-list .icon-from-to{
+    font-size: 1.4rem;
+}
+.app .form .drop-list .select-box{
+    padding: 5px;
+    display: flex;
+    gap: .5rem;
+}
+.app .form .drop-list .select-box select::-webkit-scrollbar{
+    width: .5rem;
+}
+.app .form .drop-list .select-box select::-webkit-scrollbar-track{
+    background: #fff;
+}
+.app .form .drop-list .select-box select::-webkit-scrollbar-thumb{
+    background-color: #3f55e6;
+    border-radius: 10px;
+    border-right: 2px solid #fff;
+}
+
+
+
 .app .exchange-rate{
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .app .btn{
