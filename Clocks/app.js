@@ -19,29 +19,22 @@ const appendZero = (num) => {
 	return num;
 }
 
-const searchAlarm = (hour, minute) => {
-	alarms.forEach((alarm, index) => {
-		if (alarm.hour === hour && alarm.minute === minute) {
-			alarmIndex = index;
-			return true;
+const checkAlarms = (hour,minute) => {
+	alarms.forEach((alarm) => {
+		if (parseInt(alarm.hour) === hour && parseInt(alarm.minute) === minute && alarm.isActive) {
+			alarmSound.play();
+			alarmSound.loop = true;
 		}
-	});
+		// agregar else para que se detenga el sonido cuando no es la hora
+	})
 }
-
 const displayTimeCurrent = () => {
 	const date = new Date();
 	const [hour,minute,second] = [date.getHours(), date.getMinutes(), date.getSeconds()];
 	timeRef.innerHTML = `${appendZero(hour)}:${appendZero(minute)}:${appendZero(second)}`;
+	checkAlarms(hour, minute);
+}
 
-}
-const checkAlarms = () => {
-	alarms.forEach((alarm, index) => {
-		if (alarm.hour === hour && alarm.minute === minute) {
-			alarmSound.play();
-			alarmSound.loop = true;
-		}
-	})
-}
 
 const inputCheck = (value) => {
 	const inputValue = parseInt(value);
@@ -57,6 +50,20 @@ const inputCheck = (value) => {
 	}
 	return inputValue.toString();
 }
+const starAlarm = (e) => {
+	const alarmBody = e.target.parentElement;
+	const alarmId = alarmBody.getAttribute('alarm-id');
+	alarms[alarmId].isActive = true;
+}
+const stopAlarm = (e) => {
+	const alarmBody = e.target.parentElement;
+	const alarmId = alarmBody.getAttribute('alarm-id');
+	alarms[alarmId].isActive = false;
+	alarmSound.pause();
+	alarmSound.loop = false;
+	alarmSound.currentTime = 0;
+}
+
 const createAlarmHTML = (alarm) => {
 	const {id, hour, minute} = alarm;
 	const alarmBody = document.createElement('DIV');
