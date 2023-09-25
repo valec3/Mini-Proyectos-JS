@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- fonts google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+</head>
+<body>
+
+    <div class="bg-app">
+        <main class="container">
+            <div class="app">
+                <h1>Alarma</h1>
+                <div>
+                    <h4 class="timer_display">00:00:00</h4>
+                    <div class="inputs_timer">
+                        <input type="number" id="hour_input" placeholder="00" min="0" max="23" maxlength="2">
+                        <input type="number" id="minute_input" placeholder="00" min="0" max="59" maxlength="2">
+                    </div>
+                    <button class="btn" id="btn_set_alarm">Añadir alarma</button>
+                </div>
+                <div class="active_alarms">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
