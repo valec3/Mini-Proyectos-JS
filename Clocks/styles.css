@@ -157,17 +157,17 @@ body{
 .alarm input[type="checkbox"]:before {
     position: absolute;
     content: "";
-    background-color: #757683;
+    background-color: #fb6c6c;
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 50%;
     right: 0;
 }
 .alarm input[type="checkbox"]:checked {
-    background-color: #d2e2ff;
+    background-color: rgb(160, 236, 255);
 }
 .alarm input[type="checkbox"]:checked:before {
-    background-color: #377dff;
+    background-color: #3e7ef6;
     left: 0;
 }
 

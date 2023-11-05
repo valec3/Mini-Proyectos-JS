@@ -36,7 +36,7 @@ const displayTimeCurrent = () => {
 }
 
 
-const inputCheck = (value) => {
+const inputCheck = (label,value) => {
 	const inputValue = parseInt(value);
 	if (isNaN(inputValue)) {
 		return '00';
@@ -45,9 +45,12 @@ const inputCheck = (value) => {
 	if (inputValue < 10){
 		return `0${inputValue}`;
 	}
-	if (inputValue > 59) {
+	else if (inputValue > 23 && label === 'hours') {
+		return '23';
+	}else if (inputValue > 59 && label === 'minutes') {
 		return '59';
 	}
+
 	return inputValue.toString();
 }
 const starAlarm = (e) => {
@@ -121,10 +124,10 @@ btnSetAlarm.addEventListener('click', (e) => {
 })
 
 hourInput.addEventListener('change', (e) => {
-	hourInput.value = inputCheck(hourInput.value);
+	hourInput.value = inputCheck('hours',hourInput.value);
 })
 minuteInput.addEventListener('change', (e) => {
-	minuteInput.value = inputCheck(minuteInput.value);
+	minuteInput.value = inputCheck('minutes',minuteInput.value);
 });
 
 window.onload = () => {
@@ -133,6 +136,6 @@ window.onload = () => {
 	initialMinute = 0;
 	alarmIndex = 0;
 	alarms = [];
-	// hourInput.value = appendZero(initialHour);
-	// minuteInput.value = appendZero(initialMinute);
+	hourInput.value = appendZero(initialHour);
+	minuteInput.value = appendZero(initialMinute);
 }

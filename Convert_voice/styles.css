@@ -1,0 +1,193 @@
+/*-----------------------------------*\
+    #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root{
+    --ff-principal: 'Poppins', sans-serif;
+    --bg-color-1: hsl(0, 86%, 66%);
+}
+
+
+/*-----------------------------------*\
+    #RESET
+\*-----------------------------------*/
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a,img,span,button{
+    display: block;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    height: auto;
+}
+button{
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+address{
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--ff-principal);
+    color: black;
+}
+
+:focus-visible{
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: hsl(0, 0%, 98%);
+}
+::-webkit-scrollbar-thumb{
+    background-color: hsl(0, 0%, 80%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(0, 0%, 70%);
+}
+/*-----------------------------------*\
+    #REUSED STYLE
+\*-----------------------------------*/
+.container{
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+}
+/*-----------------------------------*\
+#APP
+\*-----------------------------------*/
+html body{
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(131,58,180);
+    background: linear-gradient(45deg, rgb(53, 87, 222) 0%, rgb(63, 63, 160)50%, rgb(240, 69, 252)100%);
+}
+.app-content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+}
+.header-app h1{
+    display: flex;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header-app h1 span{
+    border-bottom: 2px solid var(--bg-color-1);
+    color: #fff;
+}
+.app__text{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* filter: blur(10px); */
+    /* background: #000; */
+}
+.app__text textarea{
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    resize: none;
+    height: 10rem;
+    background: #3c369e;
+    opacity: 0.9;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.app__text textarea::placeholder{
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.app__controllers{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+.app__controllers a{
+    background: #ff2963;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.app__controllers div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.app__controllers select{
+    width: 100%;
+    color: #fff;
+    background: #ff2963;
+    height: 3rem;
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+
+    appearance: none;
+    background-image: url("https://www.iconpacks.net/icons/2/free-arrow-down-icon-3101-thumb.png"); 
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position-x: 97%;
+}
+.app__controllers select option{
+    background: #ff2963;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
