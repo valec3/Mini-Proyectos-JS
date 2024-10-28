@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CARROUSEL 3D</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <main class="container">
+            <div class="banner">
+                <div class="slider">
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/a6/cd/9b/a6cd9b210329b2462e9141f86abed702.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/d8/02/86/d80286128e1a6c77d3ed1c04d8ca7e4f.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/12/46/27/124627ce0d8cb50aec1a25af962c6bf5.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/736x/ef/3f/fc/ef3ffc509cc0a6a53f53e6c6f30fd594.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/736x/b2/74/b1/b274b15307d44ef2e256c547ecdb342b.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/736x/e3/8a/a7/e38aa795ee403a6c331cd0fc0ad83acd.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/24/5e/0a/245e0a81826cd1b2059aba55ec36536e.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/fa/2e/33/fa2e3371f39c9ffd4953489dad270074.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/ab/42/a0/ab42a050ed14db90b50b160bd173e09c.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="item">
+                        <img
+                            src="https://i.pinimg.com/564x/01/f5/f7/01f5f77b937ed1e4a974d644d703c68d.jpg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        const $sliderItems = document.querySelectorAll('.item')
+        const $slider = document.querySelector('.slider')
+
+        $sliderItems.forEach((item, index) => {
+            item.style.transform = `rotateY(${
+                ((index + 1) * 360) / $sliderItems.length
+            }deg) translateZ(500px)`
+        })
+    </script>
+</html>
