@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Parallax effect</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="2"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="3"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="-2"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="-1"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="2"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="1"
+            />
+            <img
+                src="https://raw.githubusercontent.com/shadow578/Project-Padoru/master/Padoru/fate-nero-claudius.png"
+                alt=""
+                class="object"
+                data-value="-3"
+            />
+        </div>
+    </body>
+    <script type="text/javascript">
+        document.addEventListener('mousemove', parallax)
+        function parallax() {
+            console.log(event.pageX, event.pageY)
+            const objects = document.querySelectorAll('.object')
+            objects.forEach((object) => {
+                const speed = object.getAttribute('data-value')
+                const x = (window.innerWidth - event.pageX * speed) / 100 //
+                const y = (window.innerHeight - event.pageY * speed) / 100
+                object.style.transform = `translateX(${x}px) translateY(${y}px)`
+            })
+        }
+    </script>
+</html>
